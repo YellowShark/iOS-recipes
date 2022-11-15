@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		2888DCAB29224E76003A4174 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCAA29224E76003A4174 /* LandmarksApp.swift */; };
-		2888DCAD29224E76003A4174 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCAC29224E76003A4174 /* ContentView.swift */; };
+		2888DCAD29224E76003A4174 /* RecipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCAC29224E76003A4174 /* RecipeSearchView.swift */; };
 		2888DCAF29224E77003A4174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2888DCAE29224E77003A4174 /* Assets.xcassets */; };
 		2888DCB229224E77003A4174 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2888DCB129224E77003A4174 /* Preview Assets.xcassets */; };
+		2888DCB929226BBB003A4174 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCB829226BBA003A4174 /* NetworkImageView.swift */; };
+		2888DCBB29226F5F003A4174 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCBA29226F5F003A4174 /* RecipeCardView.swift */; };
+		2888DCC029227088003A4174 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCBF29227088003A4174 /* RecipeModel.swift */; };
+		2888DCC829235EE2003A4174 /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCC729235EE2003A4174 /* RecipeDetailsView.swift */; };
+		2888DCCA292367AA003A4174 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCC9292367AA003A4174 /* SearchViewModel.swift */; };
+		2888DCCC29237E5B003A4174 /* LikeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCCB29237E5B003A4174 /* LikeImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2888DCA729224E76003A4174 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2888DCAA29224E76003A4174 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
-		2888DCAC29224E76003A4174 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2888DCAC29224E76003A4174 /* RecipeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchView.swift; sourceTree = "<group>"; };
 		2888DCAE29224E77003A4174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2888DCB129224E77003A4174 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2888DCB829226BBA003A4174 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
+		2888DCBA29226F5F003A4174 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
+		2888DCBF29227088003A4174 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		2888DCC729235EE2003A4174 /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
+		2888DCC9292367AA003A4174 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2888DCCB29237E5B003A4174 /* LikeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,10 @@
 		2888DCA929224E76003A4174 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				2888DCC429235A64003A4174 /* Scene */,
+				2888DCC2292276AC003A4174 /* Shared */,
+				2888DCC129227653003A4174 /* Components */,
 				2888DCAA29224E76003A4174 /* LandmarksApp.swift */,
-				2888DCAC29224E76003A4174 /* ContentView.swift */,
 				2888DCAE29224E77003A4174 /* Assets.xcassets */,
 				2888DCB029224E77003A4174 /* Preview Content */,
 			);
@@ -65,6 +79,58 @@
 				2888DCB129224E77003A4174 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2888DCC129227653003A4174 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCB829226BBA003A4174 /* NetworkImageView.swift */,
+				2888DCBA29226F5F003A4174 /* RecipeCardView.swift */,
+				2888DCCB29237E5B003A4174 /* LikeImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2888DCC2292276AC003A4174 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCC3292276BA003A4174 /* Recipe */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2888DCC3292276BA003A4174 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCBF29227088003A4174 /* RecipeModel.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		2888DCC429235A64003A4174 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCC629235A90003A4174 /* Details */,
+				2888DCC529235A77003A4174 /* Search */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		2888DCC529235A77003A4174 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCAC29224E76003A4174 /* RecipeSearchView.swift */,
+				2888DCC9292367AA003A4174 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2888DCC629235A90003A4174 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCC729235EE2003A4174 /* RecipeDetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2888DCAD29224E76003A4174 /* ContentView.swift in Sources */,
+				2888DCBB29226F5F003A4174 /* RecipeCardView.swift in Sources */,
+				2888DCCC29237E5B003A4174 /* LikeImageView.swift in Sources */,
+				2888DCCA292367AA003A4174 /* SearchViewModel.swift in Sources */,
+				2888DCC829235EE2003A4174 /* RecipeDetailsView.swift in Sources */,
+				2888DCAD29224E76003A4174 /* RecipeSearchView.swift in Sources */,
+				2888DCC029227088003A4174 /* RecipeModel.swift in Sources */,
+				2888DCB929226BBB003A4174 /* NetworkImageView.swift in Sources */,
 				2888DCAB29224E76003A4174 /* LandmarksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
