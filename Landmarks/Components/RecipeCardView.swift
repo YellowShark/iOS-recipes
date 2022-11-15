@@ -14,15 +14,14 @@ struct RecipeCardView: View {
     
     var body: some View {
         HStack {
-            NetworkImageView(url: URL(string: NetworkImageView.testImage)!)
+            NetworkImageView(url: URL(string: recipe.urlRef)!)
+                .scaledToFill()
                 .clipShape(Circle())
                 .padding()
-            VStack(alignment: .leading) {
-                Text("Recipe")
-                    .font(.title)
-                Text("Details")
-                    .font(.subheadline)
-            }
+
+            Text(recipe.name)
+                .font(.title)
+                .lineLimit(2)
             Spacer()
             LikeImageView(imageType: recipe.isFavorite ? .filled : .outlined)
         }

@@ -16,6 +16,7 @@ struct RecipeSearchView: View {
                 Section {
                     TextField("Search", text: $viewModel.query)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .submitLabel(.search)
                         .onSubmit {
                             viewModel.onSearch()
                         }
@@ -25,7 +26,7 @@ struct RecipeSearchView: View {
                     ForEach(viewModel.recipes) { recipe in
                         RecipeCardView(recipe: recipe).background(
                             NavigationLink(
-                                recipe.id.uuidString,
+                                String(recipe.id),
                                 destination: RecipeDetailsView(model: recipe)).opacity(0)
                         )
                     }

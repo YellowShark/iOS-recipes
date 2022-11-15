@@ -10,7 +10,7 @@ import SwiftUI
 let defautlImageSize = 80.0
 
 struct NetworkImageView: View {
-    static let testImage = "https://www.seriouseats.com/thmb/QChcw6d_9s7rS4h57ADKBWEvxv4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-slow-cooked-bolognese-sauce-recipe-hero-03_1-3bf4f3401fa84c828f68071df496ddd3.JPG"
+    static let testImage = "https://spoonacular.com/recipeImages/654928-312x231.jpg"
     
     let url: URL
     let height: Double
@@ -24,7 +24,7 @@ struct NetworkImageView: View {
 
     var body: some View {
         
-        AsyncImage(
+        CacheAsyncImage(
             url: url,
             transaction: Transaction(animation: .easeInOut)
         ) { phase in
@@ -41,6 +41,7 @@ struct NetworkImageView: View {
                 EmptyView()
             }
         }
+        .aspectRatio(contentMode: .fill)
         .frame(width: width, height: height)
         .background(Color.white)
     }

@@ -16,8 +16,9 @@ struct RecipeDetailsView: View {
         GeometryReader { geometry in
             List {
                 VStack(alignment: .leading) {
-                    NetworkImageView(url: URL(string: model.urlRef)!, height: 300, width: .infinity)
-                        .scaledToFit()
+                    NetworkImageView(url: URL(string: model.urlRef)!, height: .infinity, width: .infinity)
+                        .scaledToFill()
+                    
                     HStack {
                         Text(model.name)
                             .font(.largeTitle)
@@ -29,7 +30,7 @@ struct RecipeDetailsView: View {
                         .padding()
                     Spacer()
                     
-                }.offset(y: geometry.safeAreaInsets.top * (-1)).listRowInsets(EdgeInsets())
+                }.offset(y: (geometry.safeAreaInsets.top) * (-1)).listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
             }.listStyle(PlainListStyle())
         }
         .navigationBarBackButtonHidden(true)
