@@ -12,7 +12,8 @@ extension RecipeSearchView {
         @Published var query: String = ""
         @Published private(set) var recipes: [RecipeModel] = []
         
-        private let interactor: RecipeInteractor = DefaultRecipeInteractor()
+        @Inject
+        private var interactor: RecipeInteractor
         
         init() {
             Task {
