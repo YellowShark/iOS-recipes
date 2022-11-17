@@ -13,6 +13,7 @@ extension Assembler {
         let container = Container()
         let assembler = Assembler([
                 ServiceAssembly(),
+                RepositoryAssembly(),
                 InteractorAssembly()
             ], container: container
         )

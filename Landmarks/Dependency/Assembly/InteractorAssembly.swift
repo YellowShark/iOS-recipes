@@ -11,7 +11,7 @@ import Swinject
 class InteractorAssembly : Assembly {
     func assemble(container: Swinject.Container) {
         container.register(RecipeInteractor.self) { r in
-            DefaultRecipeInteractor(r.resolve(RecipeService.self)!)
+            DefaultRecipeInteractor(r.resolve(RecipeService.self)!, r.resolve(RecipeRepository.self)!)
         }
     }
 }

@@ -19,7 +19,9 @@ extension RecipeSearchView {
         
         func onSearch() {
             Task {
-                recipes = await interactor.fetchRecipes(query: query)
+                await interactor.fetchRecipes(query: query) {
+                    self.recipes = $0
+                }
             }
         }
     }

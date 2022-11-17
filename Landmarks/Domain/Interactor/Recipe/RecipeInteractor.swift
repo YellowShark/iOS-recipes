@@ -8,7 +8,9 @@
 import Foundation
 
 protocol RecipeInteractor {
-    func fetchRecipes(query: String) async -> [RecipeModel]
+    func fetchRecipes(query: String, _ onSuccess: @escaping ([RecipeModel]) -> Void) async
     
     func fetchDetails(model: RecipeModel) async -> RecipeModel
+    
+    func getRecipeById(id: Int) -> RecipeModel
 }

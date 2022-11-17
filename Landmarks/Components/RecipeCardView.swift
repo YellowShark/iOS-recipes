@@ -23,7 +23,7 @@ struct RecipeCardView: View {
                 .font(.title)
                 .lineLimit(2)
             Spacer()
-            LikeImageView(imageType: recipe.isFavorite ? .filled : .outlined)
+            LikeImageView(imageType: recipe.isFavorite ? .filled : .outlined).padding()
         }
     }
 }
