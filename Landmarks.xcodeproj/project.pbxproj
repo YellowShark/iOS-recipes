@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,41 +12,48 @@
 		0C91CA2D5CCA6F743D2CE893 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F62180406A60D551C89E107 /* SearchViewModel.swift */; };
 		0E08482CCBCCFC7EB2CD3360 /* RecipeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1803C39AC7B796B82DE4DF4 /* RecipeDto.swift */; };
 		1493E6FA9519EA39E77F5487 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6581C98A9AEA54C4C0FC3E /* RecipeService.swift */; };
-		2888DCEB2924AAC2003A4174 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCEA2924AAC2003A4174 /* ServiceAssembly.swift */; };
-		2888DCEE2924ACAF003A4174 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCED2924ACAF003A4174 /* Assembler.swift */; };
-		2888DCF12924ADE2003A4174 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCF02924ADE2003A4174 /* Inject.swift */; };
-		2888DCF52924AFEF003A4174 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DCF42924AFEF003A4174 /* InteractorAssembly.swift */; };
+		221578AB122EE0BA3123E3B4 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE5C171D3909D6BBE2BDD9E /* RecipeDetailsViewModel.swift */; };
 		3754BA3A1B2C980EE4A2865F /* LikeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E300FF2BEEAC79CDBD1CE /* LikeImageView.swift */; };
+		40F6D2DE90531FCB8D4BF91C /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0179248F630CD6158B58A0BF /* Assembler.swift */; };
 		55C3C727E0823618E8BE4E94 /* RecipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054F8581F5FB0F92939A607E /* RecipeSearchView.swift */; };
 		579220E8C3B187DAA6914731 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BA07641D3526566C47F84 /* RecipeModel.swift */; };
 		6D9C0E50D50A18C72BB76B62 /* RecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC141DA095EC4F00B139E864 /* RecipeInteractor.swift */; };
 		703D0E89D865BEEBC864D814 /* RecipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970D865A8EEDDB9D129D9D96 /* RecipeDetailsView.swift */; };
 		7A945ACC29CF81A615ADCC4B /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C0A978317DBA8B5670FB09 /* RecipeCardView.swift */; };
+		7AA6F211906DB231AE6DC91B /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E8B913B0552B1B2D6A4A80 /* ServiceAssembly.swift */; };
 		88EBA2F665DADDCEB646C2A2 /* DefaultRecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB74119EF1E6E1352D6E889 /* DefaultRecipeInteractor.swift */; };
 		8A0336AA3F8C703C04B9073E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB09E0997CDDE8D7358611DF /* Preview Assets.xcassets */; };
 		8F7C5FAD45C7FC2A315BA298 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2A35E26CDCF5241890623 /* LandmarksApp.swift */; };
+		BA57B6BC3941A679767CD1EB /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A022093515057222DBC400 /* Inject.swift */; };
 		BC21CC0ECA0CB73FC77C1D25 /* HttpRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024C04996869E8B6E84D2943 /* HttpRecipeService.swift */; };
 		CFFD0CA03D1E7244D4A7A252 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95086EFAECE49F40D8EA83F /* NetworkImageView.swift */; };
+		D3F1F28D35C437C3779D06F7 /* FullRecipeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AB0E85BCECC6A89C73876D /* FullRecipeDto.swift */; };
+		DC50044625FAF7DC4B50A5C9 /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560CA1DF419A2FA485D77B9E /* InteractorAssembly.swift */; };
+		E231EBAE1983053F7BDD0CBA /* AttributedText in Frameworks */ = {isa = PBXBuildFile; productRef = BF5CA08FE2C26C930D409FD5 /* AttributedText */; };
 		E4E1A7E363D70C14908527C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9708E7B648732F1ECA2BFA21 /* Assets.xcassets */; };
 		E9C849380A6E77FB3FB28957 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776FDB0BCD077DF39173B53 /* CachedAsyncImage.swift */; };
+		EF97A29A4235B252523A20CD /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AAE8C0AEAAE547CD09539 /* HTMLStringView.swift */; };
 		FB57E3DAB3101CC3C35D8EBA /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C494400A9D1A653EA82BF962 /* RecipeModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0179248F630CD6158B58A0BF /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		024C04996869E8B6E84D2943 /* HttpRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRecipeService.swift; sourceTree = "<group>"; };
 		054F8581F5FB0F92939A607E /* RecipeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchView.swift; sourceTree = "<group>"; };
 		1C5BA07641D3526566C47F84 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
-		2888DCEA2924AAC2003A4174 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
-		2888DCED2924ACAF003A4174 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
-		2888DCF02924ADE2003A4174 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
-		2888DCF42924AFEF003A4174 /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
 		3F62180406A60D551C89E107 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		408AAE8C0AEAAE547CD09539 /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		416AF4B2061DE85C3B798C5F /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
 		4CB74119EF1E6E1352D6E889 /* DefaultRecipeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRecipeInteractor.swift; sourceTree = "<group>"; };
+		560CA1DF419A2FA485D77B9E /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
+		62AB0E85BCECC6A89C73876D /* FullRecipeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullRecipeDto.swift; sourceTree = "<group>"; };
+		72E8B913B0552B1B2D6A4A80 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		8BC2A35E26CDCF5241890623 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		9708E7B648732F1ECA2BFA21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		970D865A8EEDDB9D129D9D96 /* RecipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsView.swift; sourceTree = "<group>"; };
+		9AE5C171D3909D6BBE2BDD9E /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		A776FDB0BCD077DF39173B53 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		B5A022093515057222DBC400 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		BB09E0997CDDE8D7358611DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C35A2B63CD76F34958C51C12 /* Landmarks.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C0A978317DBA8B5670FB09 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				098254412E1412B37C606918 /* Swinject in Frameworks */,
+				E231EBAE1983053F7BDD0CBA /* AttributedText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				970D865A8EEDDB9D129D9D96 /* RecipeDetailsView.swift */,
+				9AE5C171D3909D6BBE2BDD9E /* RecipeDetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -102,47 +111,22 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		1D860824C437B4D3EBEE3A14 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA971BF16D1DAC488D20ED /* Assembler */,
+				50D22C4884DD3EF4810C314E /* Assembly */,
+				CDB980F0DBF83458AD41AF10 /* Utils */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 		266AACAB332AB4C3776565C5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				7F32925F3602D2261E60B818 /* Recipe */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		2888DCE82924AA55003A4174 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				2888DCEF2924ADD8003A4174 /* Utils */,
-				2888DCEC2924AC8A003A4174 /* Assembler */,
-				2888DCE92924AA82003A4174 /* Assembly */,
-			);
-			path = Dependency;
-			sourceTree = "<group>";
-		};
-		2888DCE92924AA82003A4174 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				2888DCEA2924AAC2003A4174 /* ServiceAssembly.swift */,
-				2888DCF42924AFEF003A4174 /* InteractorAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
-		2888DCEC2924AC8A003A4174 /* Assembler */ = {
-			isa = PBXGroup;
-			children = (
-				2888DCED2924ACAF003A4174 /* Assembler.swift */,
-			);
-			path = Assembler;
-			sourceTree = "<group>";
-		};
-		2888DCEF2924ADD8003A4174 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2888DCF02924ADE2003A4174 /* Inject.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		41C0BE7688EA398C807F7F3E /* Recipe */ = {
@@ -171,6 +155,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		50D22C4884DD3EF4810C314E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				560CA1DF419A2FA485D77B9E /* InteractorAssembly.swift */,
+				72E8B913B0552B1B2D6A4A80 /* ServiceAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		523FC5B3B7E1DE43A384DB91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,9 +175,9 @@
 		7CF6E610273B6A755B3B38CA /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
-				2888DCE82924AA55003A4174 /* Dependency */,
 				CBB9603F2DA19BC80472B8B2 /* Components */,
 				4B751152DDB2F7B4DC1ADD91 /* Data */,
+				1D860824C437B4D3EBEE3A14 /* Dependency */,
 				CC87482DA83C14BD0D1B5523 /* Domain */,
 				450E871B458946F2674680B7 /* Extensions */,
 				1378DE86E4F310CA5EA9EFE7 /* Preview Content */,
@@ -218,6 +211,14 @@
 				7CF6E610273B6A755B3B38CA /* Landmarks */,
 				B15DC0A93293C3AA4B9A5897 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		9CFA971BF16D1DAC488D20ED /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				0179248F630CD6158B58A0BF /* Assembler.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 		A580E6AAF492B3D07F1277F5 /* Recipe */ = {
@@ -257,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				A776FDB0BCD077DF39173B53 /* CachedAsyncImage.swift */,
+				408AAE8C0AEAAE547CD09539 /* HTMLStringView.swift */,
 				FA8E300FF2BEEAC79CDBD1CE /* LikeImageView.swift */,
 				D95086EFAECE49F40D8EA83F /* NetworkImageView.swift */,
 				C6C0A978317DBA8B5670FB09 /* RecipeCardView.swift */,
@@ -274,6 +276,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		CDB980F0DBF83458AD41AF10 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B5A022093515057222DBC400 /* Inject.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D178E4ABC80FA37397068389 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +295,7 @@
 		DC2DE7A84BC1A684780AE22F /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				62AB0E85BCECC6A89C73876D /* FullRecipeDto.swift */,
 				D1803C39AC7B796B82DE4DF4 /* RecipeDto.swift */,
 			);
 			path = Recipe;
@@ -326,6 +337,7 @@
 			name = Landmarks;
 			packageProductDependencies = (
 				E192CB8834698B263A071DB2 /* Swinject */,
+				BF5CA08FE2C26C930D409FD5 /* AttributedText */,
 			);
 			productName = Landmarks;
 			productReference = C35A2B63CD76F34958C51C12 /* Landmarks.app */;
@@ -345,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "Landmarks" */;
+			buildConfigurationList = 1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "landmarks" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -355,6 +367,7 @@
 			);
 			mainGroup = 95406B11B518F428F6B63826;
 			packageReferences = (
+				7D5A4F117DCB94F037B29740 /* XCRemoteSwiftPackageReference "AttributedText" */,
 				B6A8CFBD908E3E5450C5ABA3 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			projectDirPath = "";
@@ -403,26 +416,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F6D2DE90531FCB8D4BF91C /* Assembler.swift in Sources */,
 				E9C849380A6E77FB3FB28957 /* CachedAsyncImage.swift in Sources */,
 				88EBA2F665DADDCEB646C2A2 /* DefaultRecipeInteractor.swift in Sources */,
 				0B2E7AFA7D51BBF744766AAF /* DtoToModel+.swift in Sources */,
+				D3F1F28D35C437C3779D06F7 /* FullRecipeDto.swift in Sources */,
+				EF97A29A4235B252523A20CD /* HTMLStringView.swift in Sources */,
 				BC21CC0ECA0CB73FC77C1D25 /* HttpRecipeService.swift in Sources */,
-				2888DCEE2924ACAF003A4174 /* Assembler.swift in Sources */,
+				BA57B6BC3941A679767CD1EB /* Inject.swift in Sources */,
+				DC50044625FAF7DC4B50A5C9 /* InteractorAssembly.swift in Sources */,
 				8F7C5FAD45C7FC2A315BA298 /* LandmarksApp.swift in Sources */,
 				3754BA3A1B2C980EE4A2865F /* LikeImageView.swift in Sources */,
 				CFFD0CA03D1E7244D4A7A252 /* NetworkImageView.swift in Sources */,
 				7A945ACC29CF81A615ADCC4B /* RecipeCardView.swift in Sources */,
 				703D0E89D865BEEBC864D814 /* RecipeDetailsView.swift in Sources */,
-				2888DCF52924AFEF003A4174 /* InteractorAssembly.swift in Sources */,
+				221578AB122EE0BA3123E3B4 /* RecipeDetailsViewModel.swift in Sources */,
 				0E08482CCBCCFC7EB2CD3360 /* RecipeDto.swift in Sources */,
 				6D9C0E50D50A18C72BB76B62 /* RecipeInteractor.swift in Sources */,
-				2888DCEB2924AAC2003A4174 /* ServiceAssembly.swift in Sources */,
 				579220E8C3B187DAA6914731 /* RecipeModel.swift in Sources */,
 				FB57E3DAB3101CC3C35D8EBA /* RecipeModel.xcdatamodeld in Sources */,
 				55C3C727E0823618E8BE4E94 /* RecipeSearchView.swift in Sources */,
 				1493E6FA9519EA39E77F5487 /* RecipeService.swift in Sources */,
-				2888DCF12924ADE2003A4174 /* Inject.swift in Sources */,
 				0C91CA2D5CCA6F743D2CE893 /* SearchViewModel.swift in Sources */,
+				7AA6F211906DB231AE6DC91B /* ServiceAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "Landmarks" */ = {
+		1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "landmarks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				965C25B381595D04F9864607 /* Debug */,
@@ -621,6 +637,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7D5A4F117DCB94F037B29740 /* XCRemoteSwiftPackageReference "AttributedText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Iaenhaall/AttributedText";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.0;
+			};
+		};
 		B6A8CFBD908E3E5450C5ABA3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -632,6 +656,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BF5CA08FE2C26C930D409FD5 /* AttributedText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5A4F117DCB94F037B29740 /* XCRemoteSwiftPackageReference "AttributedText" */;
+			productName = AttributedText;
+		};
 		E192CB8834698B263A071DB2 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B6A8CFBD908E3E5450C5ABA3 /* XCRemoteSwiftPackageReference "Swinject" */;

@@ -12,7 +12,9 @@ struct LikeImageView: View {
     
     var body: some View {
         let sysImage = imageType == .filled ? "hand.thumbsup.fill" : "hand.thumbsup"
-        return Image(systemName: sysImage).resizable().frame(width: likeThumbSize, height: likeThumbSize).padding()
+        return Image(systemName: sysImage)
+            .resizable()
+            .frame(width: likeThumbSize, height: likeThumbSize)
     }
 }
 

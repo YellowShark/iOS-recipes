@@ -27,7 +27,7 @@ struct RecipeSearchView: View {
                         RecipeCardView(recipe: recipe).background(
                             NavigationLink(
                                 String(recipe.id),
-                                destination: RecipeDetailsView(model: recipe)).opacity(0)
+                                destination: RecipeDetailsView(recipe)).opacity(0)
                         )
                     }
                 }

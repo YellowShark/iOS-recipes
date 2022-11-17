@@ -14,7 +14,7 @@ struct RecipeCardView: View {
     
     var body: some View {
         HStack {
-            NetworkImageView(url: URL(string: recipe.urlRef)!)
+            NetworkImageView(url: recipe.urlRef)
                 .scaledToFill()
                 .clipShape(Circle())
                 .padding()

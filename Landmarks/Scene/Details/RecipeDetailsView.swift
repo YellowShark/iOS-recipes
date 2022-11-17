@@ -6,35 +6,58 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct RecipeDetailsView: View {
-    let model: RecipeModel
+    @StateObject private var viewModel = ViewModel()
+    let recipe: RecipeModel
+    
+    init(_ recipe: RecipeModel) {
+        self.recipe = recipe
+    }
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         GeometryReader { geometry in
-            List {
+            ScrollView(.vertical) {
                 VStack(alignment: .leading) {
-                    NetworkImageView(url: URL(string: model.urlRef)!, height: .infinity, width: .infinity)
+                    NetworkImageView(url: viewModel.recipe.urlRef , height: 300, width: geometry.size.width)
                         .scaledToFill()
                     
                     HStack {
-                        Text(model.name)
+                        Text(viewModel.recipe.name)
+                            .fixedSize(horizontal: false, vertical: true)
                             .font(.largeTitle)
+                            .padding(.trailing)
                         Spacer()
-                        LikeImageView(imageType: model.isFavorite ? .filled : .outlined)
-                    }.padding(.leading)
-                    Text(model.info)
-                        .font(.body)
-                        .padding()
-                    Spacer()
+                        LikeImageView(imageType: viewModel.recipe.isFavorite ? .filled : .outlined)
+                    }.padding(.horizontal)
                     
+                    HTMLStringView(viewModel.recipe.info)
+                        .padding(.horizontal)
+                        .frame(height: geometry.size.height / 2.4)
+                    if let url = URL(string: viewModel.recipe.sourceUrl) {
+                        HStack() {
+                            Spacer()
+                            Link("GET FULL RECIPE", destination: url)
+                                .font(.largeTitle)
+                                .foregroundColor(.blue)
+                                .padding()
+                                .overlay(RoundedRectangle(cornerRadius: 16)
+                                    .stroke(.blue, lineWidth: 4))
+                            Spacer()
+                        }
+                    }
+                    Spacer()
                 }.offset(y: (geometry.safeAreaInsets.top) * (-1)).listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
-            }.listStyle(PlainListStyle())
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack())
+            .onAppear {
+                viewModel.fetchDetails(model: recipe)
+            }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack())
     }
     
     private func btnBack() -> some View {
@@ -58,7 +81,7 @@ struct RecipeDetailsView: View {
 struct RecipeDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeDetailsView(
-            model: RecipeModel(name: "Pasta", info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", urlRef: NetworkImageView.testImage)
+            RecipeModel(name: "Pasta", info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", urlRef: NetworkImageView.testImage)
         )
     }
 }

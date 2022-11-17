@@ -12,3 +12,9 @@ extension RecipeDto {
         return RecipeModel(id: self.id, name: self.title, info: "", urlRef: self.image)
     }
 }
+
+extension FullRecipeDto {
+    func toModel() -> RecipeModel {
+        return RecipeModel(id: self.id, name: self.title, info: self.summary, urlRef: self.image, sourceUrl: self.sourceUrl)
+    }
+}

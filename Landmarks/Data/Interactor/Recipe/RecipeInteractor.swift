@@ -9,4 +9,6 @@ import Foundation
 
 protocol RecipeInteractor {
     func fetchRecipes(query: String) async -> [RecipeModel]
+    
+    func fetchDetails(model: RecipeModel) async -> RecipeModel
 }

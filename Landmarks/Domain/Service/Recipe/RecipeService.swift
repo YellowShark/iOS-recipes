@@ -9,4 +9,6 @@ import Foundation
 
 protocol RecipeService {
     func fetchRecipes(query: String) async -> [RecipeModel]
+    
+    func fetchDetails(id: Int) async -> RecipeModel
 }

@@ -10,7 +10,7 @@ import Foundation
 extension RecipeSearchView {
     @MainActor class ViewModel : ObservableObject {
         @Published var query: String = ""
-        @Published private(set) var recipes: [RecipeModel] = []
+        @Published private(set) var recipes = [RecipeModel]()
         
         @Inject
         private var interactor: RecipeInteractor
