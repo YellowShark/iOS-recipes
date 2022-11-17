@@ -15,11 +15,7 @@ extension RecipeSearchView {
         @Inject
         private var interactor: RecipeInteractor
         
-        init() {
-            Task {
-                recipes = await interactor.fetchRecipes(query: query)
-            }
-        }
+        init() { onSearch() }
         
         func onSearch() {
             Task {

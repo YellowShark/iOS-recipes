@@ -9,7 +9,7 @@ import Foundation
 
 extension RecipeDetailsView {
     @MainActor class ViewModel : ObservableObject {
-        @Published private(set) var recipe: RecipeModel = RecipeModel()
+        @Published private(set) var recipe: RecipeModel?
         private var cachedRecipe: RecipeModel = RecipeModel()
         
         @Inject

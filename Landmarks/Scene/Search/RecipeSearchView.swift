@@ -14,7 +14,7 @@ struct RecipeSearchView: View {
         NavigationView {
             List {
                 Section {
-                    TextField("Search", text: $viewModel.query)
+                    TextField(Strings.RecipeSearch.search, text: $viewModel.query)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .submitLabel(.search)
                         .onSubmit {
@@ -31,7 +31,7 @@ struct RecipeSearchView: View {
                         )
                     }
                 }
-            }.navigationTitle("Recipes")
+            }.navigationTitle(Strings.RecipeSearch.title)
                 .listStyle(PlainListStyle())
         }
     }

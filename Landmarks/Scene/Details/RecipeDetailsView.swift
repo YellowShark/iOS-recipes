@@ -10,51 +10,53 @@ import WebKit
 
 struct RecipeDetailsView: View {
     @StateObject private var viewModel = ViewModel()
-    let recipe: RecipeModel
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    private let recipe: RecipeModel
     
     init(_ recipe: RecipeModel) {
         self.recipe = recipe
     }
-    
-    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    
+        
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView(.vertical) {
-                VStack(alignment: .leading) {
-                    NetworkImageView(url: viewModel.recipe.urlRef , height: 300, width: geometry.size.width)
-                        .scaledToFill()
-                    
-                    HStack {
-                        Text(viewModel.recipe.name)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .font(.largeTitle)
-                            .padding(.trailing)
-                        Spacer()
-                        LikeImageView(imageType: viewModel.recipe.isFavorite ? .filled : .outlined)
-                    }.padding(.horizontal)
-                    
-                    HTMLStringView(viewModel.recipe.info)
-                        .padding(.horizontal)
-                        .frame(height: geometry.size.height / 2.4)
-                    if let url = URL(string: viewModel.recipe.sourceUrl) {
-                        HStack() {
-                            Spacer()
-                            Link("GET FULL RECIPE", destination: url)
+        if let recipe = viewModel.recipe {
+            GeometryReader { geometry in
+                ScrollView(.vertical) {
+                    VStack(alignment: .leading) {
+                        NetworkImageView(url: recipe.urlRef , height: 300, width: geometry.size.width)
+                            .scaledToFill()
+                        
+                        HStack {
+                            Text(recipe.name)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .font(.largeTitle)
-                                .foregroundColor(.blue)
-                                .padding()
-                                .overlay(RoundedRectangle(cornerRadius: 16)
-                                    .stroke(.blue, lineWidth: 4))
+                                .padding(.trailing)
                             Spacer()
+                            LikeImageView(imageType: recipe.isFavorite ? .filled : .outlined)
+                        }.padding(.horizontal)
+                        
+                        HTMLStringView(recipe.info)
+                            .padding(.horizontal)
+                            .frame(height: geometry.size.height / 2.4)
+                        if let url = URL(string: recipe.sourceUrl) {
+                            HStack() {
+                                Spacer()
+                                Link(Strings.RecipeDetails.getFull, destination: url)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.blue)
+                                    .padding()
+                                    .overlay(RoundedRectangle(cornerRadius: 16)
+                                        .stroke(.blue, lineWidth: 4))
+                                Spacer()
+                            }
                         }
-                    }
-                    Spacer()
-                }.offset(y: (geometry.safeAreaInsets.top) * (-1)).listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                        Spacer()
+                    }.offset(y: (geometry.safeAreaInsets.top) * (-1)).listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                }
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: btnBack())
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: btnBack())
-            .onAppear {
+        } else {
+            ProgressView().onAppear {
                 viewModel.fetchDetails(model: recipe)
             }
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		0E08482CCBCCFC7EB2CD3360 /* RecipeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1803C39AC7B796B82DE4DF4 /* RecipeDto.swift */; };
 		1493E6FA9519EA39E77F5487 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6581C98A9AEA54C4C0FC3E /* RecipeService.swift */; };
 		221578AB122EE0BA3123E3B4 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE5C171D3909D6BBE2BDD9E /* RecipeDetailsViewModel.swift */; };
+		2888DD012926171E003A4174 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2888DD002926171E003A4174 /* Strings.swift */; };
 		3754BA3A1B2C980EE4A2865F /* LikeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E300FF2BEEAC79CDBD1CE /* LikeImageView.swift */; };
 		40F6D2DE90531FCB8D4BF91C /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0179248F630CD6158B58A0BF /* Assembler.swift */; };
 		55C3C727E0823618E8BE4E94 /* RecipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054F8581F5FB0F92939A607E /* RecipeSearchView.swift */; };
@@ -41,6 +42,7 @@
 		024C04996869E8B6E84D2943 /* HttpRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRecipeService.swift; sourceTree = "<group>"; };
 		054F8581F5FB0F92939A607E /* RecipeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchView.swift; sourceTree = "<group>"; };
 		1C5BA07641D3526566C47F84 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		2888DD002926171E003A4174 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3F62180406A60D551C89E107 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		408AAE8C0AEAAE547CD09539 /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		416AF4B2061DE85C3B798C5F /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
@@ -129,6 +131,22 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		2888DCFE29261705003A4174 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2888DCFF29261712003A4174 /* Strings */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2888DCFF29261712003A4174 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2888DD002926171E003A4174 /* Strings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		41C0BE7688EA398C807F7F3E /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +193,7 @@
 		7CF6E610273B6A755B3B38CA /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				2888DCFE29261705003A4174 /* Common */,
 				CBB9603F2DA19BC80472B8B2 /* Components */,
 				4B751152DDB2F7B4DC1ADD91 /* Data */,
 				1D860824C437B4D3EBEE3A14 /* Dependency */,
@@ -357,7 +376,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "landmarks" */;
+			buildConfigurationList = 1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "Landmarks" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -426,6 +445,7 @@
 				BA57B6BC3941A679767CD1EB /* Inject.swift in Sources */,
 				DC50044625FAF7DC4B50A5C9 /* InteractorAssembly.swift in Sources */,
 				8F7C5FAD45C7FC2A315BA298 /* LandmarksApp.swift in Sources */,
+				2888DD012926171E003A4174 /* Strings.swift in Sources */,
 				3754BA3A1B2C980EE4A2865F /* LikeImageView.swift in Sources */,
 				CFFD0CA03D1E7244D4A7A252 /* NetworkImageView.swift in Sources */,
 				7A945ACC29CF81A615ADCC4B /* RecipeCardView.swift in Sources */,
@@ -616,7 +636,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "landmarks" */ = {
+		1209CDCA674E175197B38C48 /* Build configuration list for PBXProject "Landmarks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				965C25B381595D04F9864607 /* Debug */,
