@@ -19,15 +19,25 @@ class DefaultRecipeInteractor : RecipeInteractor {
     func fetchRecipes(query: String, _ onSuccess: @escaping ([RecipeModel]) -> Void) async {
         let results = await service.fetchRecipes(query: query)
         DispatchQueue.main.async {
-            onSuccess(results)
+            self.repository.saveRecipes(results) { err in
+                if let error = err {
+                    print(error)
+                }
+                onSuccess(self.repository.getRecipesByName(query))
+            }
         }
     }
     
-    func fetchDetails(model: RecipeModel) async -> RecipeModel {
-        return await service.fetchDetails(id: model.id)
-    }
-    
-    func getRecipeById(id: Int) -> RecipeModel {
-        return repository.getRecipeById(id)
+    func getRecipeById(id: Int, _ onSuccess: @escaping (RecipeModel) -> Void) async {
+        let result = await service.fetchDetails(id: id)
+
+        DispatchQueue.main.async {
+            self.repository.saveRecipe(result) { err in
+                if let error = err {
+                    print(error)
+                }
+                onSuccess(self.repository.getRecipeById(result.id))
+            }
+        }
     }
 }

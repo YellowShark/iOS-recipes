@@ -8,8 +8,9 @@
 import Foundation
 
 protocol RecipeRepository {
-    func saveRecipe(_ recipe: RecipeModel)
-    func saveRecipes(_ recipes: [RecipeModel])
+    func saveRecipe(_ recipe: RecipeModel, onComplete: @escaping (Swift.Error?) -> Void)
+    func saveRecipes(_ recipes: [RecipeModel], onComplete: @escaping (Swift.Error?) -> Void)
     func getAllRecipes() -> [RecipeModel]
+    func getRecipesByName(_ query: String) -> [RecipeModel]
     func getRecipeById(_ id: Int) -> RecipeModel
 }

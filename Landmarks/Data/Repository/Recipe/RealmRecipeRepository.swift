@@ -15,28 +15,35 @@ class RealmRecipeRepository : RecipeRepository {
         self.realm = realm
     }
     
-    func saveRecipe(_ recipe: RecipeModel) {
-        do {
-            try realm.write {
-                realm.add(recipe.toEntity())
+    func saveRecipe(_ recipe: RecipeModel, onComplete: @escaping (Swift.Error?) -> Void) {
+        realm.writeAsync(
+            {
+                self.realm.add(recipe.toEntity(), update: .modified)
+            }, onComplete: { err in
+                onComplete(err)
             }
-        } catch {
-            print(error)
-        }
+        )
     }
     
-    func saveRecipes(_ recipes: [RecipeModel]) {
-        do {
-            try realm.write {
-                recipes.forEach { model in realm.add(model.toEntity()) }
+    func saveRecipes(_ recipes: [RecipeModel], onComplete: @escaping (Swift.Error?) -> Void) {
+        realm.writeAsync(
+            {
+                recipes.forEach ({ model in self.realm.add(model.toEntity(), update: .modified) })
+            }, onComplete: { err in
+                onComplete(err)
             }
-        } catch {
-            print(error)
-        }
+        )
     }
     
     func getAllRecipes() -> [RecipeModel] {
         return realm.objects(RecipeEntity.self).map{$0.toModel()}
+    }
+    
+    func getRecipesByName(_ query: String) -> [RecipeModel] {
+        if query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return getAllRecipes()
+        }
+        return realm.objects(RecipeEntity.self).filter{$0.title.contains(query)}.map{$0.toModel()}
     }
     
     func getRecipeById(_ id: Int) -> RecipeModel {

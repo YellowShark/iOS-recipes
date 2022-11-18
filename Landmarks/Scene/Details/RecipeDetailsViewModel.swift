@@ -16,8 +16,11 @@ extension RecipeDetailsView {
         private var interactor: RecipeInteractor
         
         func fetchDetails(model: RecipeModel) {
-            recipe = interactor.getRecipeById(id: model.id)
-            print("DB:", recipe)
+            Task {
+                await interactor.getRecipeById(id: model.id) {
+                    self.recipe = $0
+                }
+            }
         }
     }
 }
